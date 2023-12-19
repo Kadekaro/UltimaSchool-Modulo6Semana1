@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>contato</title>
+</head>
+<body style="margin: 20px;">
+     <form onsubmit="limparCampos('meuFormulario')">
+        <h2 style="margin-bottom: 20px; display: block;">Inscrição:</h2>
+
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px;">Nome: </label>
+            <input type="text" class="form-control" id="Nome" style="width: 20%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px;">Email: </label>
+            <input type="text" class="form-control" id="Email" style="width: 20%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px;">Mensagem: </label>
+            <input type="text" class="form-control" id="Mensagem" style="width: 20%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function limparCampos(formId) {
+            var form = document.getElementById(formId);
+            form.reset();
+            return true; // para evitar que o formulário seja realmente enviado (porque não há ação definida)
+        }
+    </script>
+</body>
+</html>
